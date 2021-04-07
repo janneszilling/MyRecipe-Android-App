@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listviewLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:fitsSystemWindows="true"
+    tools:context=".list.RecipeListActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/title_myrecipes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/listview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ListView>
+
+    <ScrollView
+        android:id="@+id/scroll_recipe_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="44dp"
+        android:background="#FFFFFF"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bn_invisible"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="27dp"
+                android:layout_height="24dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="10dp"
+                android:background="#FFFFFF"
+                android:drawableTop="@drawable/ic_close_black_24dp"
+                android:onClick="bn_invisible_click"
+                android:textColor="@color/colorTextDark" />
+
+            <TextView
+                android:id="@+id/tvnamedetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/tv_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorTextDark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvdifficultydetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/tv_difficulty"
+                android:textColor="@color/colorTextDark" />
+
+            <TextView
+                android:id="@+id/tvtimedetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/tv_worktime"
+                android:textColor="@color/colorTextDark" />
+
+            <TextView
+                android:id="@+id/tvingredientsheading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/tv_ingredients"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorTextDark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvingredientsdetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/tv_ingredients"
+                android:textColor="@color/colorTextDark" />
+
+            <TextView
+                android:id="@+id/tvrecipeheading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/tv_recipe"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorTextDark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvrecipedetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/tv_recipe"
+                android:textColor="@color/colorTextDark" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/bn_home"
+            style=' style="?android:attr/buttonBarButtonStyle"'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:drawableTop="@drawable/ic_home_black_24dp"
+            android:drawableTint="@color/colorTextDark"
+            android:onClick="bn_home_click"
+            android:text="@string/bn_home"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextDark"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/bn_create"
+            style=' style="?android:attr/buttonBarButtonStyle"'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:backgroundTint="#FFFFFF"
+            android:drawableTop="@drawable/ic_add_black_24dp"
+            android:drawableTint="@color/colorTextDark"
+            android:onClick="bn_create_click"
+            android:text="@string/bn_new"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextDark"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/bn_list"
+            style=' style="?android:attr/buttonBarButtonStyle"'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/gradient"
+            android:backgroundTint="#FFFFFF"
+            android:drawableTop="@drawable/ic_book_black_24dp"
+            android:drawableTint="#FC8B56"
+            android:onClick="bn_list_click"
+            android:text="@string/bn_list"
+            android:textAllCaps="false"
+            android:textColor="#FC8B56"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

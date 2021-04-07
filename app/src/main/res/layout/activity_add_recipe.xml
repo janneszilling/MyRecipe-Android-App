@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".add.AddRecipeActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pexels_mike_1192031" />
+
+    <TextView
+        android:id="@+id/title_addrecipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/title_createrecipes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/t_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/colorTextDark"
+        android:ems="10"
+        android:gravity="right"
+        android:hint="Gericht"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvname"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_icon_worktime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawableStart="@drawable/ic_timer_black_24dp"
+        android:drawableTint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/icon_tv_difficulty"
+        app:layout_constraintStart_toStartOf="@+id/icon_tv_difficulty"
+        app:layout_constraintTop_toBottomOf="@+id/icon_tv_difficulty" />
+
+    <TextView
+        android:id="@+id/tv_time_hint1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_time_hint"
+        android:textColor="#FC8B56"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/t_worktime"
+        app:layout_constraintTop_toBottomOf="@+id/t_worktime" />
+
+    <EditText
+        android:id="@+id/t_worktime"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/colorTextDark"
+        android:ems="10"
+        android:gravity="right"
+        android:hint="00:20"
+        android:inputType="time"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvworktime"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_icon_recipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:drawableStart="@drawable/ic_format_align_left_black_24dp"
+        android:drawableTint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/icon_tv_ingredients"
+        app:layout_constraintStart_toStartOf="@+id/icon_tv_ingredients"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <TextView
+        android:id="@+id/title_recipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="@string/tv_recipe"
+        android:textColor="@color/colorTextDark"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_icon_recipe"
+        app:layout_constraintStart_toStartOf="@+id/tv_ingredients" />
+
+    <TextView
+        android:id="@+id/tvworktime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="@string/tv_worktime"
+        android:textColor="@color/colorTextDark"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_icon_worktime"
+        app:layout_constraintStart_toStartOf="@+id/tvdifficulty" />
+
+    <TextView
+        android:id="@+id/tv_ingredients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="@string/tv_ingredients"
+        android:textColor="@color/colorTextDark"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_tv_ingredients"
+        app:layout_constraintStart_toStartOf="@+id/tvcookingtime" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/gradient_button"
+        android:onClick="bn_insert_click"
+        android:text="@string/bn_insert"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/t_cookingtime"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/colorTextDark"
+        android:ems="10"
+        android:gravity="right"
+        android:hint="24:00"
+        android:inputType="time"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvcookingtime"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvdifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="@string/tv_difficulty"
+        android:textColor="@color/colorTextDark"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_tv_difficulty"
+        app:layout_constraintStart_toStartOf="@+id/tvname" />
+
+    <TextView
+        android:id="@+id/tv_time_hint2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_time_hint"
+        android:textColor="#FC8B56"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/t_cookingtime"
+        app:layout_constraintTop_toBottomOf="@+id/t_cookingtime" />
+
+    <TextView
+        android:id="@+id/icon_tv_ingredients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawableStart="@drawable/ic_content_paste_black_24dp"
+        android:drawableTint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_icon_cookingtime"
+        app:layout_constraintStart_toStartOf="@+id/tv_icon_cookingtime"
+        app:layout_constraintTop_toBottomOf="@+id/tv_icon_cookingtime" />
+
+    <TextView
+        android:id="@+id/icon_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:drawableStart="@drawable/ic_local_dining_black_24dp"
+        android:drawableTint="#000000"
+        app:layout_constraintStart_toStartOf="@+id/title_addrecipe"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/tv_icon_cookingtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:drawableStart="@drawable/ic_timer_black_24dp"
+        android:drawableTint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_icon_worktime"
+        app:layout_constraintStart_toStartOf="@+id/tv_icon_worktime"
+        app:layout_constraintTop_toBottomOf="@+id/tv_icon_worktime" />
+
+    <TextView
+        android:id="@+id/icon_tv_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawableStart="@drawable/ic_equalizer_black_24dp"
+        android:drawableTint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/icon_name_tv"
+        app:layout_constraintStart_toStartOf="@+id/icon_name_tv"
+        app:layout_constraintTop_toBottomOf="@+id/icon_name_tv" />
+
+    <Spinner
+        android:id="@+id/spinner_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/colorTextDark"
+        android:entries="@array/headings"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvdifficulty"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvcookingtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="@string/tv_cookingtime"
+        android:textColor="@color/colorTextDark"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_icon_cookingtime"
+        app:layout_constraintStart_toStartOf="@+id/tvworktime" />
+
+    <TextView
+        android:id="@+id/tvname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="2dp"
+        android:drawableTint="#000000"
+        android:text="@string/tv_name"
+        android:textColor="@color/colorTextDark"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_name_tv"
+        app:layout_constraintStart_toEndOf="@+id/icon_name_tv" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/icon_tv_ingredients"
+        app:layout_constraintTop_toBottomOf="@+id/icon_tv_ingredients">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/t_ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Salz, Pfeffer, 1EL Mehl, 1L Milch"
+                android:inputType="textMultiLine" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_icon_recipe"
+        app:layout_constraintTop_toBottomOf="@+id/tv_icon_recipe">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/t_recipe"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginEnd="24dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="1. Alles in eine Schüssel geben"
+                android:inputType="textMultiLine" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/bn_home"
+            style=' style="?android:attr/buttonBarButtonStyle"'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:backgroundTint="#FFFFFF"
+            android:drawableTop="@drawable/ic_home_black_24dp"
+            android:drawableTint="@color/colorTextDark"
+            android:onClick="bn_home_click"
+            android:text="@string/bn_home"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextDark"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/bn_create"
+            style=' style="?android:attr/buttonBarButtonStyle"'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:backgroundTint="#FFFFFF"
+            android:drawableTop="@drawable/ic_add_black_24dp"
+            android:drawableTint="#FC8B56"
+            android:onClick="bn_create_click"
+            android:text="@string/bn_new"
+            android:textAllCaps="false"
+            android:textColor="#FC8B56"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/bn_list"
+            style=' style="?android:attr/buttonBarButtonStyle"'
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/gradient"
+            android:backgroundTint="#FFFFFF"
+            android:drawableTop="@drawable/ic_book_black_24dp"
+            android:drawableTint="@color/colorTextDark"
+            android:onClick="bn_list_click"
+            android:text="@string/bn_list"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextDark"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

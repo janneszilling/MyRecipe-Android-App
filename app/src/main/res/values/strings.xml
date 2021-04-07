@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MyRecipe</string>
+
+    <string name="bn_new">Neues Rezept</string>
+    <string name="bn_list">Meine Rezepte</string>
+    <string name="bn_home">Home</string>
+
+    <string name="title_myrecipes">Meine Rezepte</string>
+    <string name="title_createrecipes">Neues Rezept</string>
+
+    <string name="tv_name">Name</string>
+    <string name="tv_ingredients">Zutaten</string>
+    <string name="tv_difficulty">Schwierigkeitsgrad</string>
+    <string name="tv_worktime">Arbeitszeit</string>
+    <string name="tv_cookingtime">Koch-/Backzeit</string>
+    <string name="tv_recipe">Rezept</string>
+
+    <string name="tv_time_hint">Angabe in Stunden : Minuten.</string>
+
+    <string name="bn_insert">Speichern</string>
+
+</resources>

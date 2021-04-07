@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:padding="1dp"
+    >
+
+    <TextView
+        android:id="@+id/tvpindex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+
+        android:text="@string/tv_name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/tvpindex"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_icon_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_timer_black_24dp"
+        android:drawableTint="#ffffff"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tvname"
+        app:layout_constraintTop_toBottomOf="@+id/tvname" />
+
+    <TextView
+        android:id="@+id/tvworktime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="2dp"
+        android:text="@string/tv_worktime"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_icon_time"
+        app:layout_constraintStart_toEndOf="@+id/tv_icon_time" />
+
+    <TextView
+        android:id="@+id/tvcookingtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/tv_cookingtime"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvworktime"
+        app:layout_constraintStart_toEndOf="@+id/tvworktime" />
+
+    <TextView
+        android:id="@+id/tvdifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="Schwierigkeit"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvcookingtime"
+        app:layout_constraintStart_toEndOf="@+id/tv_icon_difficulty" />
+
+    <TextView
+        android:id="@+id/tv_icon_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:drawableStart="@drawable/ic_equalizer_black_24dp"
+        android:drawableTint="#ffffff"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_icon_time"
+        app:layout_constraintStart_toEndOf="@+id/tvcookingtime" />
+</androidx.constraintlayout.widget.ConstraintLayout>
